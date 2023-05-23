@@ -9,8 +9,14 @@ def login():
     if login_button:
         if username == "admin" and password == "password":
             st.success("Logged in successfully!")
-            # Add your code for the logged-in page or redirect to another page
+            # Redirect to the new page
+            new_page()
         else:
             st.error("Invalid username or password.")
 
+def new_page():
+    st.title("Welcome to the New Page!")
+    st.write("This is the new page content.")
+
+# Initially display the login page
 login()
